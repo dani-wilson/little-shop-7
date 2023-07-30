@@ -68,4 +68,14 @@ RSpec.configure do |config|
       with.library :rails
     end
   end
+
+  Unsplash.configure do |config|
+    config.application_access_key = "api_key"
+    config.application_secret = "secret_key"
+    config.application_redirect_uri = "https://your-application.com/oauth/callback"
+    config.utm_source = "little-esty-shop"
+  
+    # optional:
+    config.logger = MyCustomLogger.new
+  end
 end
